@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Escape from LA</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body style = "overflow-x:hidden;">
+    <iframe id="background" src="anim.html" ></iframe>
+    <div id="scroll"></div>
+    <div id = "audioDiv">
+        <button id="playAudio"></button>
+        <audio id="music">
+            <source src="audio/audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
+
+<script>
+    var playAudio = document.getElementById("music");
+    var button = document.getElementById("playAudio");
+    document.body.style.overflowY = "hidden";
+
+    button.addEventListener("click", function(){
+        playAudio.play();
+        button.style.display = "none";
+        document.body.style.overflowY = "auto";
+
+    });
+
+
+</script>
+</html>
